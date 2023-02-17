@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<meta charset="ISO-8859-1" />
+	<title>Cadastrar Aluno</title>
+</h:head>
+<h:body>
+<h:form id="cadastrarAluno">
+	<h2>Cadastrar aluno</h2>
+	<h:outputLabel value="Nome:"/>
+	<h:inputText id="cadastrarNome" />
+	<br/>
+	<br/>
+	<h:outputLabel value="Sexo:"/>
+	<h:inputText id="cadastrarSexo"/>
+	<br/>
+	<br/>
+	<h:outputLabel value="CPF:"/>
+	<h:inputText id="cadastrarCpf"/>
+	<br/>
+	<br/>
+	<h:outputLabel value="Telefone:"/>
+	<h:inputText id="cadastrarTelefone"/>
+	<br/>
+	<br/>
+	<h:commandButton value="voltar" action="Menu"/>
+	<h:commandButton value="cadastrar" style="margin-left:10px" actionListener="#{cadastrarBean.enviaCadastroDao()}"/>
+</h:form>
+</h:body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<f:metadata>
+		<f:viewAction action="#{cadastrarDao.listar()}" />
+	</f:metadata>
+	<title>Tabela</title>
+</h:head>
+<h:body>
+	<h:form id="cadastrarAluno">
+		<h2>Tabela do aluno</h2>
+
+		<p:dataTable var="aluno" value="#{cadastrarDao.cadastro}"
+			style="margin-bottom:40px">
+			<f:facet name="header">
+            Aluno Cadastros
+        </f:facet>
+			<p:column headerText="nome">
+				<h:outputText value="#{aluno.nome}" />
+			</p:column>
+
+			<p:column headerText="sexo">
+				<h:outputText value="#{aluno.sexo}" />
+			</p:column>
+
+			<p:column headerText="CPF">
+				<h:outputText value="#{aluno.cpf}" />
+			</p:column>
+
+			<p:column headerText="telefone">
+				<h:outputText value="#{aluno.telefone}" />
+			</p:column>
+		</p:dataTable>
+
+		<h:commandButton value="voltar" action="Menu" />
+	</h:form>
+</h:body>
+</html>
